@@ -82,7 +82,7 @@ const updateUser = async (dispatch, user, updates) => {
   try {
     const updatedUser = await userClient.updateUser(user, updates)
     dispatch({type: 'finish update', updatedUser})
-    return updateUser
+    return updatedUser
   } catch (error) {
     dispatch({type: 'fail update', error})
     throw error
